@@ -12,7 +12,6 @@ gulp.task("html", function() {
 
 gulp.task("styles", function() {
   return gulp.src("./app/assets/styles/styles.css")
-    .pipe()
     .pipe(gulp.dest("./app/temp/styles")
     );
 });

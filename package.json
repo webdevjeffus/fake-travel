@@ -1,0 +1,23 @@
+{
+  "name": "fake-travel",
+  "version": "1.0.0",
+  "description": "A mock website created to practice an node-based workflow",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webdevjeffus/fake-travel.git"
+  },
+  "author": "Jeff George",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/webdevjeffus/fake-travel/issues"
+  },
+  "homepage": "https://github.com/webdevjeffus/fake-travel#readme",
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "normalize.css": "^5.0.0"
+  }
+}

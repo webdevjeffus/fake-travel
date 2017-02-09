@@ -1,4 +1,13 @@
 body {
+  color: #2f5572;
   background-color: rgb(220,220,220);
   padding: 0.6rem;
+  -webkit-columns: 20rem 2;
+     -moz-columns: 20rem 2;
+          columns: 20rem 2;
+}
+
+.box a {
+  display: block;
+  padding: 0.75rem;
 }

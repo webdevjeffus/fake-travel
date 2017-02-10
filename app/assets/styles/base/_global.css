@@ -1,6 +1,14 @@
-body {
+html {
+  font-size: 12px;
   font-family: 'Roboto', sans-serif;
-  color: #333;
+
+  @mixin atSmall { font-size: 14px; }
+  @mixin atMedium { font-size: 16px; }
+  @mixin atLarge { font-size: 19px; }
+}
+
+body {
+  color: $colorText;
 }
 
 img {

@@ -7,9 +7,10 @@
 @import "modules/_wrapper.css";
 @import "modules/_page-section.css";
 @import "modules/_btn.css";
-@import "modules/_text.css";
 
 @import "blocks/_large-hero";
 @import "blocks/_narrative";
 @import "blocks/_features";
+
+@import "modules/_mods";  /* Place last for priority */
 

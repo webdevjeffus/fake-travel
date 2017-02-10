@@ -1,0 +1,8 @@
+.txt--thin { font-weight: 100; }
+.txt--light { font-weight: 300; }
+.txt--reg { font-weight: 400;}
+.txt--med { font-weight: 500; }
+.txt--bold { font-weight: 700; }
+
+.txt--theme-color { color: $colorTheme; }
+.txt--theme-acc { color: $colorAccent; }

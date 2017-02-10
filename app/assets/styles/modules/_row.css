@@ -11,8 +11,14 @@
   }
 
   @mixin atMedium {
+
     &__med-4 {
       width: 33.33%;
+      float: left;
+    }
+
+    &__med-4lg {
+      width: 37%;
       float: left;
     }
 
@@ -20,7 +26,11 @@
       width: 66.66%;
       float: left;
     }
-  }
 
+    &__med-8sm {
+      width: 62%;
+      float: left;
+    }
+  }
 
 }

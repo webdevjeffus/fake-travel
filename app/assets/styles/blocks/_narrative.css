@@ -1,8 +1,24 @@
 .narrative {
 
-  .narrative__heading {
-    font-size: ;
+  &__heading {
+    font-size: 2rem;
+    font-weight: 100;
+    text-align: center;
+    color: $colorTheme;
+
+    @mixin atSmall {
+      font-size: 2.5rem;
+    }
   }
 
+  &__subheading {
+    font-size: 1.4rem;
+    font-weight: 100;
+    text-align: center;
+
+    @mixin atSmall {
+      font-size: 1.75rem;
+    }
+  }
 
 }

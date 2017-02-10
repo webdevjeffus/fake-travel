@@ -5,6 +5,7 @@ var autoprefixer = require("autoprefixer");
 var cssvars = require("postcss-simple-vars");
 var nested = require("postcss-nested");
 var cssImport = require("postcss-import");
+var browserSync = require("browser-sync").create();
 
 
 gulp.task("default", function(){
@@ -15,6 +16,7 @@ gulp.task("html", function() {
   console.log("Something happens to HTML");
 });
 
+
 gulp.task("styles", function() {
   return gulp.src("./app/assets/styles/styles.css")
     .pipe(postcss([cssImport, cssvars, nested, autoprefixer]))
@@ -22,13 +24,28 @@ gulp.task("styles", function() {
     );
 });
 
+gulp.task('injectCss', ["styles"],function() {
+  return gulp.src('./app/temp/styles/styles.css')
+    .pipe(browserSync.stream());
+});
+
+
 gulp.task("watch", function() {
+
+  browserSync.init({
+    notify: false, /* optional--turns off msgs of changes in browser window */
+    server: {
+      baseDir: "app"
+    }
+  });
+
   watch("./app/index.html", function() {
-    gulp.start("html");
+    browserSync.reload();
   });
 
   watch("./app/assets/styles/**/*.css", function() {
-    gulp.start("styles");
+    gulp.start("injectCss");
   });
 
 });
+

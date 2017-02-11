@@ -1,0 +1,79 @@
+.people {
+
+  &--testimonials {
+    background: url("/assets/images/testimonials-bg.jpg") top center no-repeat;
+    background-size: cover;
+  }
+
+  &__title {
+    font-size: 2.75rem;
+    font-weight: 100;
+    text-align: center;
+    margin-top: 1rem;
+    color: $colorTheme;
+
+    @mixin atSmall {
+      font-size: 3.75rem;
+    }
+  }
+
+  &__title-icon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.75rem;
+    height: 6rem;
+
+    @mixin atSmall {
+      position: relative;
+      top: 0.25rem;
+      display: inline-block;
+      margin-bottom: 0;
+      margin-right: 0.5rem;
+      margin-left: 0;
+      height: 3rem;
+    }
+  }
+
+  &__person-block {
+    background-color: rgba(255,255,255,0.75);
+    padding: 0 1.2rem 1px;
+    margin-top: 9rem;
+
+    @mixin atSmall {
+    margin-top: 6rem;
+    height: 24rem;
+    }
+  }
+
+  &__person-headshot {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 160px;
+    height: 160px;
+    margin: 0 auto -80px auto;
+    position: relative;
+    top: -80px;
+    border: 0.375rem solid rgba(255,255,255,0.75);
+  }
+
+  &__person-name {
+    text-align: center;
+    font-size: 1.5rem;
+    color: $colorTheme;
+    margin: 0;
+    padding: 0.75rem;
+  }
+
+  &__person-note {
+    text-align: center;
+    color: $colorAccent;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  & p {
+    line-height: 1.25;
+  }
+
+}

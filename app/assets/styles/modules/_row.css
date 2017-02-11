@@ -10,6 +10,14 @@
     margin-right: -3rem;
   }
 
+  &--gutters-wide > div {
+    padding-right: 6rem;
+  }
+
+  &--gutters-wide {
+    margin-right: -6rem;
+  }
+
   @mixin atMedium {
 
     &__med-4 {
@@ -19,6 +27,11 @@
 
     &__med-4-lg {
       width: 37%;
+      float: left;
+    }
+
+    &__med-6 {
+      width: 50%;
       float: left;
     }
 
@@ -32,5 +45,7 @@
       float: left;
     }
   }
+
+
 
 }

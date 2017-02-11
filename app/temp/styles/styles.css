@@ -465,27 +465,19 @@ template {
 html {
   font-size: 12px;
   font-family: 'Roboto', sans-serif;
+
 }
 
 @media (min-width: 530px) {
-
-  html {
-    font-size: 14px;
-  }
+  html { font-size: 14px; }
 }
 
 @media (min-width: 800px) {
-
-  html {
-    font-size: 16px;
-  }
+  html { font-size: 16px; }
 }
 
 @media (min-width: 1200px) {
-
-  html {
-    font-size: 19px;
-  }
+  html { font-size: 19px; }
 }
 
 body {
@@ -570,6 +562,14 @@ h1,h2,h3,h4,h5,h6 { margin-bottom: 0; }
   margin-right: -3rem;
 }
 
+.row--gutters-wide > div {
+  padding-right: 6rem;
+}
+
+.row--gutters-wide {
+  margin-right: -6rem;
+}
+
 @media (min-width: 800px) {
 
   .row__med-4 {
@@ -579,6 +579,11 @@ h1,h2,h3,h4,h5,h6 { margin-bottom: 0; }
 
   .row__med-4-lg {
     width: 37%;
+    float: left;
+  }
+
+  .row__med-6 {
+    width: 50%;
     float: left;
   }
 
@@ -704,6 +709,89 @@ h1,h2,h3,h4,h5,h6 { margin-bottom: 0; }
 
 .features {
   background-color: #2f5572;
+  color: white;
+  font-weight: 300;
+
+}
+
+.features__title {
+  font-size: 2.75rem;
+  font-weight: 100;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+@media (min-width: 530px) {
+
+  .features__title {
+    font-size: 3.75rem;
+  }
+}
+
+.features__title-icon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.75rem;
+  height: 6rem;
+}
+
+@media (min-width: 530px) {
+
+  .features__title-icon {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-right: 0.5rem;
+    margin-left: 0;
+    height: 5rem;
+  }
+}
+
+@media (min-width: 530px) {
+
+  .features__feature-block {
+    padding-left: 6rem;
+    position: relative;
+    height: 12rem;
+  }
+}
+
+.features__feature-icon {
+  display: block;
+  float: left;
+  height: 1.75rem;
+  margin-right: 1rem;
+}
+
+@media (min-width: 530px) {
+
+  .features__feature-icon {
+    float: none;
+    margin-right: 0;
+    position: absolute;
+    left: 0;
+    height: 4rem;
+  }
+}
+
+.features__feature-title {
+  font-size: 1.875rem;
+  font-weight: 100;
+}
+
+.features p {
+  float: left;
+  line-height: 1.5;
+  font-size: 1.125rem;
+  margin-top: 0.5rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 530px) {
+
+  .features p {
+    float: none;
+  }
 }
 
 .--block-center {
@@ -736,7 +824,6 @@ h1,h2,h3,h4,h5,h6 { margin-bottom: 0; }
 
 .--mar-b-1x-phone {
   margin-bottom: 1rem;
-
 }
 
 @media (min-width: 800px) {

@@ -1,10 +1,28 @@
-body {
+* { box-sizing: border-box; }
+
+html {
+  font-size: 12px;
   font-family: 'Roboto', sans-serif;
+
+  @mixin atSmall { font-size: 14px; }
+  @mixin atMedium { font-size: 16px; }
+  @mixin atLarge { font-size: 19px; }
+}
+
+body {
   color: #333;
 }
+
 
 img {
   max-width: 100%;
   height: auto;
 }
+
+a {
+  color: #d59541;
+  text-decoration: none;
+}
+
+h1,h2,h3,h4,h5,h6 { margin-bottom: 0; }
 

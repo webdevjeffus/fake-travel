@@ -1,0 +1,44 @@
+.narrative {
+
+  &__title {
+    font-size: 1.75rem;
+    font-weight: 100;
+    text-align: center;
+    color: $colorTheme;
+
+    @mixin atSmall {
+      font-size: 3rem;
+    }
+  }
+
+  &__subtitle {
+    font-size: 1.4rem;
+    font-weight: 100;
+    text-align: center;
+    color: $colorAccent;
+
+    @mixin atSmall {
+      font-size: 1.75rem;
+    }
+  }
+
+  &__section-head {
+    font-size: 1.75rem;
+    font-weight: 300;
+    color: $colorTheme;
+
+    @mixin atSmall {
+      font-size: 2.5rem;
+    }
+  }
+
+  & p {
+    line-height: 1.5;
+    font-size: 1.125rem;
+  }
+
+  & a {
+    font-weight: 700;
+  }
+
+}

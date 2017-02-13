@@ -1,8 +1,12 @@
 .people {
 
   &--testimonials {
-    background: url("/assets/images/testimonials-bg.jpg") top center no-repeat;
-    background-size: cover;
+    background-color: #e0e6ef;
+
+    @mixin atSmall {
+      background: url("/assets/images/testimonials-bg.jpg") top center no-repeat;
+      background-size: cover;
+    }
   }
 
   &__title {
@@ -40,10 +44,10 @@
     padding: 0 1.2rem 1px;
     margin-top: 9rem;
 
-    @mixin atSmall {
+    @mixin atMedium {
     margin-top: 6rem;
-    height: 24rem;
     }
+
   }
 
   &__person-headshot {
@@ -51,7 +55,7 @@
     overflow: hidden;
     width: 160px;
     height: 160px;
-    margin: 0 auto -80px auto;
+    margin: 0 auto -80px;
     position: relative;
     top: -80px;
     border: 0.375rem solid rgba(255,255,255,0.75);
@@ -73,7 +77,7 @@
   }
 
   & p {
-    line-height: 1.25;
+    line-height: 1.4;
   }
 
 }

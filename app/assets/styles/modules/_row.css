@@ -10,13 +10,23 @@
     margin-right: -3rem;
   }
 
+
   &--gutters-wide > div {
-    padding-right: 6rem;
+      padding-right: 6rem;
   }
 
   &--gutters-wide {
     margin-right: -6rem;
   }
+
+  &--gutters-narrow > div {
+    padding-right: 2rem;
+  }
+
+  &--gutters-narrow {
+    margin-right: -2rem;
+  }
+
 
   @mixin atMedium {
 
@@ -46,6 +56,17 @@
     }
   }
 
+  &--equal-ht-med {
 
+    @mixin atMedium {
+      display: flex;
+    }
+
+    & > div {
+      float: none;
+      display: flex;
+    }
+
+  }
 
 }

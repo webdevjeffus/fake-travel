@@ -38,6 +38,15 @@
     position: relative;
     height: 12rem;
     }
+
+    @mixin atMedium {
+      height: 18rem;
+    }
+
+    @mixin atLarge {
+      height: 12rem;
+    }
+
   }
 
   &__feature-icon {

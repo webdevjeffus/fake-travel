@@ -10,7 +10,6 @@
     margin-right: -3rem;
   }
 
-
   &--gutters-wide > div {
       padding-right: 6rem;
   }
@@ -83,6 +82,18 @@
       display: flex;
     }
 
+  }
+
+  &--equal-ht-lg {
+
+    @mixin atLarge {
+      display: flex;
+    }
+
+    & > div {
+      float: none;
+      display: flex;
+    }
 
   }
 

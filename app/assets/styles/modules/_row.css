@@ -35,7 +35,7 @@
       float: left;
     }
 
-    &__med-4-lg {
+    &__med-4-wide {
       width: 37%;
       float: left;
     }
@@ -50,7 +50,7 @@
       float: left;
     }
 
-    &__med-8-sm {
+    &__med-8-narrow {
       width: 62%;
       float: left;
     }

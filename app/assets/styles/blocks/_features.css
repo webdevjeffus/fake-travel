@@ -8,9 +8,11 @@
     font-weight: 100;
     text-align: center;
     margin-top: 1rem;
+    margin-bottom: 3rem;
 
     @mixin atSmall {
       font-size: 3.75rem;
+      margin-bottom: 1rem;
     }
   }
 
@@ -19,19 +21,18 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 0.75rem;
-    height: 6rem;
-
 
     @mixin atSmall {
       display: inline-block;
       margin-bottom: 0;
       margin-right: 0.5rem;
       margin-left: 0;
-      height: 5rem;
     }
   }
 
   &__feature-block {
+
+    @mixin clearfix;
 
     @mixin atSmall {
     padding-left: 6rem;
@@ -44,24 +45,21 @@
     }
 
     @mixin atLarge {
-      height: 12rem;
+      height: 16rem;
     }
 
   }
 
   &__feature-icon {
     display: block;
-    float: left;
-    height: 1.75rem;
-    margin-right: 1rem;
-
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.5rem;
 
     @mixin atSmall {
-      float: none;
       margin-right: 0;
       position: absolute;
       left: 0;
-      height: 4rem;
     }
   }
 

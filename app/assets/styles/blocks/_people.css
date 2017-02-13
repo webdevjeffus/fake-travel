@@ -26,7 +26,6 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 0.75rem;
-    height: 6rem;
 
     @mixin atSmall {
       position: relative;
@@ -35,7 +34,6 @@
       margin-bottom: 0;
       margin-right: 0.5rem;
       margin-left: 0;
-      height: 3rem;
     }
   }
 

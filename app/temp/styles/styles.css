@@ -1099,6 +1099,31 @@ Instead, edit gulp/templates/sprite.css
   line-height: 1.4;
 }
 
+.footer {
+  background-color: #2f5572;
+  color: white;
+  padding: 0.5rem 0;
+  text-align: center;
+
+
+}
+
+.footer__text {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 100;
+  line-height: 1.25;
+}
+
+@media (min-width: 800px) {
+
+  .footer__text {
+    display: inline;
+    margin-bottom: 0;
+    margin-right: 3rem;
+  }
+}
+
 .--block-center {
   margin-left: auto;
   margin-right: auto;
@@ -1149,6 +1174,8 @@ Instead, edit gulp/templates/sprite.css
 .--text-med   { font-weight: 500; }
 
 .--text-bold  { font-weight: 700; }
+
+.--text-no-break { white-space: nowrap; }
 
 /* Place last for priority */
 

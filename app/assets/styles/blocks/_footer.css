@@ -1,0 +1,21 @@
+.footer {
+  background-color: $colorTheme;
+  color: white;
+  padding: 0.5rem 0;
+  text-align: center;
+
+  &__text {
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: 100;
+    line-height: 1.25;
+
+    @mixin atMedium {
+      display: inline;
+      margin-bottom: 0;
+      margin-right: 3rem;
+    }
+  }
+
+
+}

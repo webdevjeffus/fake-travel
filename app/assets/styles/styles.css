@@ -13,6 +13,7 @@
 @import "blocks/_narrative";
 @import "blocks/_features";
 @import "blocks/_people";
+@import "blocks/_footer";
 
 @import "modules/_mods";  /* Place last for priority */
 

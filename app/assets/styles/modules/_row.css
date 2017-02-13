@@ -56,6 +56,13 @@
     }
   }
 
+  @mixin atLarge {
+    &__lg-4 {
+      width: 33.33%;
+      float: left;
+    }
+  }
+
   &--equal-ht-med {
 
     @mixin atMedium {
@@ -66,6 +73,16 @@
       float: none;
       display: flex;
     }
+
+    @mixin atLarge {
+      display: flex;
+    }
+
+    & > div {
+      float: none;
+      display: flex;
+    }
+
 
   }
 

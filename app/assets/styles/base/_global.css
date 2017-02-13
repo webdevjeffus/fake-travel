@@ -1,23 +1,29 @@
+
+/* BEGIN SITE STYLES *********************************************************/
+
+
 * { box-sizing: border-box; }
 
 html {
   font-size: 12px;
   font-family: 'Roboto', sans-serif;
 
-}
+  @mixin atSmall {
+    { font-size: 14px; }
+  }
 
-@media (min-width: 530px) {
-  html { font-size: 14px; }
-}
-@media (min-width: 800px) {
-  html { font-size: 16px; }
-}
-@media (min-width: 1200px) {
-  html { font-size: 19px; }
+  @mixin atMedium {
+    { font-size: 16px; }
+  }
+
+  @mixin atLarge {
+    { font-size: 19px; }
+  }
+
 }
 
 body {
-  color: #333;
+  color: $colorText;
 }
 
 

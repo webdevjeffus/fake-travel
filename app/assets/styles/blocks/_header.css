@@ -1,0 +1,71 @@
+.header {
+  position: absolute;
+  z-index: 999;
+  width: 100%;
+  padding: 0.625rem 0;
+
+  @mixin atMedium {
+    background-color: rgba($colorTheme, 0.3);
+  }
+
+  &__btn-container {
+    float: right;
+  }
+
+  &__nav {
+    float: right;
+  }
+  &__nav ul {
+    margin: 0;
+    padding: 0;
+    padding-top: 0.75rem;
+  }
+
+  &__nav li {
+    list-style: none;
+    display: inline;
+    padding-right: 1.5rem;
+  }
+
+  &__nav a {
+    color: white;
+    font-weight: 300;
+  }
+
+  &__logo {
+    position: absolute;
+    top: 0;
+    background-color: $colorTheme;
+    padding: 1.5rem 2rem;
+    left: 50%;
+    transform: translateX(-50%) scale(0.8);
+    transform-origin: 50% 0%;
+
+    @mixin atMedium {
+      left: auto;
+      transform: translateX(0) scale(1);
+    }
+  }
+
+  &__menu-content {
+    display: none;
+
+    @mixin atMedium {
+      display: block;
+    }
+  }
+
+  &__menu-icon {
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: white;
+
+    @mixin atMedium {
+      display: none;
+    }
+  }
+
+}

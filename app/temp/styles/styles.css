@@ -720,6 +720,7 @@ Instead, edit gulp/templates/sprite.css
 
 .icon {
       background-image: url("/assets/images/sprites/sprite-0f9283b3.svg");
+      color: rgba(0,0,0,0);
     }
 
 .icon--clear-view-escapes {
@@ -814,6 +815,14 @@ Instead, edit gulp/templates/sprite.css
   left: 0;
   width: 100%;
   text-align: center;
+  padding-top: 5rem;
+}
+
+@media (min-width: 800px) {
+
+  .large-hero__text-content {
+    padding-top: 3.5rem;
+  }
 }
 
 .large-hero__title {
@@ -1124,6 +1133,94 @@ Instead, edit gulp/templates/sprite.css
   }
 }
 
+.header {
+  position: absolute;
+  z-index: 999;
+  width: 100%;
+  padding: 0.625rem 0;
+
+}
+
+@media (min-width: 800px) {
+
+  .header {
+    background-color: rgba(47,85,114, 0.3);
+  }
+}
+
+.header__btn-container {
+  float: right;
+}
+
+.header__nav {
+  float: right;
+}
+
+.header__nav ul {
+  margin: 0;
+  padding: 0;
+  padding-top: 0.75rem;
+}
+
+.header__nav li {
+  list-style: none;
+  display: inline;
+  padding-right: 1.5rem;
+}
+
+.header__nav a {
+  color: white;
+  font-weight: 300;
+}
+
+.header__logo {
+  position: absolute;
+  top: 0;
+  background-color: #2f5572;
+  padding: 1.5rem 2rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%) scale(0.8);
+          transform: translateX(-50%) scale(0.8);
+  -webkit-transform-origin: 50% 0%;
+          transform-origin: 50% 0%;
+}
+
+@media (min-width: 800px) {
+
+  .header__logo {
+    left: auto;
+    -webkit-transform: translateX(0) scale(1);
+            transform: translateX(0) scale(1);
+  }
+}
+
+.header__menu-content {
+  display: none;
+}
+
+@media (min-width: 800px) {
+
+  .header__menu-content {
+    display: block;
+  }
+}
+
+.header__menu-icon {
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: white;
+}
+
+@media (min-width: 800px) {
+
+  .header__menu-icon {
+    display: none;
+  }
+}
+
 .--block-center {
   margin-left: auto;
   margin-right: auto;
@@ -1169,7 +1266,7 @@ Instead, edit gulp/templates/sprite.css
 
 .--text-light { font-weight: 300; }
 
-.--text-reg   { font-weight: 400;}
+.--text-reg   { font-weight: 400; }
 
 .--text-med   { font-weight: 500; }
 

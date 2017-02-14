@@ -93,6 +93,7 @@ var MobileMenu = function () {
 
     this.headerMenuIcon = (0, _jquery2.default)("#headerMenuIcon");
     this.headerMenu = (0, _jquery2.default)("#headerMenu");
+    this.masthead = (0, _jquery2.default)("#masthead");
     this.events();
   }
 
@@ -106,6 +107,7 @@ var MobileMenu = function () {
     value: function toggleMenu() {
       console.log("Click");
       this.headerMenu.toggleClass("header__menu-content--displayed");
+      this.masthead.toggleClass("header--expanded");
     }
   }]);
 

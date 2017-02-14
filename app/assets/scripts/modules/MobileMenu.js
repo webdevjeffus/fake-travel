@@ -4,6 +4,7 @@ class MobileMenu {
   constructor() {
     this.headerMenuIcon = $("#headerMenuIcon");
     this.headerMenu = $("#headerMenu");
+    this.masthead = $("#masthead");
     this.events();
   }
 
@@ -14,6 +15,7 @@ class MobileMenu {
   toggleMenu() {
     console.log("Click");
     this.headerMenu.toggleClass("header__menu-content--displayed");
+    this.masthead.toggleClass("header--expanded")
   }
 
 

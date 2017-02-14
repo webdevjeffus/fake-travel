@@ -50,6 +50,10 @@
   &__menu-content {
     display: none;
 
+    &--displayed {
+      display: block;
+    }
+
     @mixin atMedium {
       display: block;
     }

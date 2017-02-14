@@ -68,17 +68,38 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-function Person(fullName, color) {
-  this.name = fullName;
-  this.favColor = color;
-  this.greet = function() {
-    console.log("Hello, there! I'm " + this.name + " and my favorite color is " + this.favColor + ".");
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Person = function () {
+  function Person(fullName, favColor) {
+    _classCallCheck(this, Person);
+
+    this.name = fullName;
+    this.color = favColor;
   }
-}
 
-module.exports = Person;
+  _createClass(Person, [{
+    key: "greet",
+    value: function greet() {
+      console.log("Greetings, programs! I'm " + this.name + " and my favorite color is " + this.color + ".");
+    }
+  }]);
+
+  return Person;
+}();
+
+exports.default = Person;
 
 /***/ }),
 /* 1 */
@@ -10311,14 +10332,22 @@ return jQuery;
 /* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+
+
+var _Person = __webpack_require__(0);
+
+var _Person2 = _interopRequireDefault(_Person);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 var $ = __webpack_require__(1);
-var Person = __webpack_require__(0);
-
-var john = new Person("John Doe", "blue");
-
-john.greet();
+// var Person = require("./modules/Person");
 
 
+var hank = new _Person2.default("Hankrin Ferinale", "tan");
+
+hank.greet();
 
 /***/ })
 /******/ ]);

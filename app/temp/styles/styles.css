@@ -1276,6 +1276,34 @@ Instead, edit gulp/templates/sprite.css
   top: 1rem;
   right: 1rem;
   z-index: 100;
+}
+
+.header__menu-icon-bars {
+  position: absolute;
+  top: 0.84rem;
+  left: 0;
+  width: 2rem;
+  height: 0.3333rem;
+  background-color: white;
+}
+
+.header__menu-icon-bars:before {
+  content: "";
+  position: absolute;
+  top: -0.84rem;
+  left: 0;
+  width: 2rem;
+  height: 0.3333rem;
+  background-color: white;
+}
+
+.header__menu-icon-bars:after {
+  content: "";
+  position: absolute;
+  top: 0.84rem;
+  left: 0;
+  width: 2rem;
+  height: 0.3333rem;
   background-color: white;
 }
 

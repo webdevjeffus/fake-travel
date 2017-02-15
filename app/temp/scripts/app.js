@@ -79,27 +79,45 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+var _jquery = __webpack_require__(1);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var Person = function () {
-  function Person(fullName, favColor) {
-    _classCallCheck(this, Person);
+var MobileMenu = function () {
+  function MobileMenu() {
+    _classCallCheck(this, MobileMenu);
 
-    this.name = fullName;
-    this.color = favColor;
+    this.headerMenuIcon = (0, _jquery2.default)("#headerMenuIcon");
+    this.headerMenu = (0, _jquery2.default)("#headerMenu");
+    this.masthead = (0, _jquery2.default)("#masthead");
+    this.headerMenuIconBars = (0, _jquery2.default)("#headerMenuIconBars");
+    this.events();
   }
 
-  _createClass(Person, [{
-    key: "greet",
-    value: function greet() {
-      console.log("Greetings, programs! I'm " + this.name + " and my favorite color is " + this.color + ".");
+  _createClass(MobileMenu, [{
+    key: "events",
+    value: function events() {
+      this.headerMenuIcon.click(this.toggleMenu.bind(this));
+    }
+  }, {
+    key: "toggleMenu",
+    value: function toggleMenu() {
+      console.log("Click");
+      this.headerMenu.toggleClass("header__menu-content--displayed");
+      this.masthead.toggleClass("header--expanded");
+
+      this.headerMenuIconBars.toggleClass("header__menu-icon-bars--close-x");
     }
   }]);
 
-  return Person;
+  return MobileMenu;
 }();
 
-exports.default = Person;
+exports.default = MobileMenu;
 
 /***/ }),
 /* 1 */
@@ -10335,19 +10353,13 @@ return jQuery;
 "use strict";
 
 
-var _Person = __webpack_require__(0);
+var _MobileMenu = __webpack_require__(0);
 
-var _Person2 = _interopRequireDefault(_Person);
+var _MobileMenu2 = _interopRequireDefault(_MobileMenu);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var $ = __webpack_require__(1);
-// var Person = require("./modules/Person");
-
-
-var hank = new _Person2.default("Hankrin Ferinale", "tan");
-
-hank.greet();
+var mobileMenu = new _MobileMenu2.default();
 
 /***/ })
 /******/ ]);

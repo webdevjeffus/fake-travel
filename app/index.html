@@ -25,9 +25,15 @@
         </div>
         <nav class="header__nav">
           <ul>
-            <li><a href="#our-beginning">Our Beginning</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
+            <li>
+              <a href="#our-beginning" id="our-beginning-link">Our Beginning</a>
+            </li>
+            <li>
+              <a href="#features" id="features-link">Features</a>
+            </li>
+            <li>
+              <a href="#testimonials" id="testimonials-link">Testimonials</a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -59,7 +65,7 @@
     </div>
   </div>
 
-  <div id="our-beginning" class="narrative page-section">
+  <div id="our-beginning" class="narrative page-section" data-matching-link="#our-beginning-link">
     <div class="wrapper">
       <h2 class="narrative__title --mar-b-1x">The first trip we planned <strong>was our own.</strong></h2>
       <h3 class="narrative__subtitle --block-narrow --block-center --mar-b-3x">Ever since, we&rsquo;ve been working to make travel <strong>better for everyone.</strong></h3>
@@ -90,7 +96,7 @@
     </div>
   </div>
 
-  <div id="features" class="page-section features">
+  <div id="features" class="page-section features" data-matching-link="#features-link">
     <div class="wrapper">
       <h2 class="features__title">
         <span class="features__title-icon icon icon--star"></span>
@@ -134,7 +140,7 @@
     </div>
   </div>
 
-  <div id="testimonials" class="page-section people people--testimonials">
+  <div id="testimonials" class="page-section people people--testimonials" data-matching-link="#testimonials-link">
     <div class="wrapper wrapper--no-pad-until-sm">
       <h2 class="people__title">
         <span class="people__title-icon icon icon--comment"></span>

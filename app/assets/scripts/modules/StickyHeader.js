@@ -5,7 +5,10 @@ class StickyHeader {
   constructor() {
     this.masthead = $("#masthead");
     this.mastheadTrigger = $(".large-hero__title");
+    this.pageSections = $(".page-section");
+    this.mastheadLinks = $(".header__nav a");
     this.createMastheadWaypoint();
+    this.createPageSectionWaypoints();
   }
 
   createMastheadWaypoint() {
@@ -20,6 +23,36 @@ class StickyHeader {
         }
       }
     });
+  }
+
+  createPageSectionWaypoints() {
+    var that = this;
+    this.pageSections.each( function() {
+      var currentPageSection = this;
+      new Waypoint({
+        element: currentPageSection,
+        handler: function(direction) {
+          if (direction === "down") {
+            var matchingLink = currentPageSection.getAttribute("data-matching-link");
+            $(that.mastheadLinks).removeClass("is-current-link");
+            $(matchingLink).addClass("is-current-link");
+          }
+        },
+        offset: "30%"
+      });
+
+      new Waypoint({
+        element: currentPageSection,
+        handler: function(direction) {
+          if (direction === "up") {
+            var matchingLink = currentPageSection.getAttribute("data-matching-link");
+            $(that.mastheadLinks).removeClass("is-current-link");
+            $(matchingLink).addClass("is-current-link");
+          }
+        },
+        offset: "-50%"
+      });
+    })
   }
 
 }

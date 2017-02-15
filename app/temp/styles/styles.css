@@ -1235,6 +1235,10 @@ Instead, edit gulp/templates/sprite.css
   .header__nav a {
     background-color: transparent;
   }
+
+  .header__nav a.is-current-link {
+    color: #d59541;
+  }
 }
 
 .header__logo {

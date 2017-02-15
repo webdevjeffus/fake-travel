@@ -70,6 +70,9 @@
 
     @mixin atMedium {
       background-color: transparent;
+      &.is-current-link {
+        color: $colorAccent;
+      }
     }
   }
 

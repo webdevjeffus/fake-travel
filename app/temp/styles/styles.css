@@ -1166,8 +1166,13 @@ Instead, edit gulp/templates/sprite.css
 @media (min-width: 800px) {
 
   .header {
+    position: fixed;
     background-color: rgba(47,85,114, 0.3);
     padding: 0.625rem 0;
+  }
+
+  .header--dark {
+    background-color: rgba(21,48,68, 0.85);
   }
 }
 
@@ -1242,6 +1247,10 @@ Instead, edit gulp/templates/sprite.css
           transform: translateX(-50%) scale(0.8);
   -webkit-transform-origin: 50% 0%;
           transform-origin: 50% 0%;
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
 }
 
 @media (min-width: 800px) {
@@ -1250,6 +1259,11 @@ Instead, edit gulp/templates/sprite.css
     left: auto;
     -webkit-transform: translateX(0) scale(1);
             transform: translateX(0) scale(1);
+  }
+
+  .header--dark .header__logo {
+    -webkit-transform: scale(0.57);
+            transform: scale(0.57);
   }
 }
 

@@ -1285,9 +1285,13 @@ Instead, edit gulp/templates/sprite.css
   width: 2rem;
   height: 0.3333rem;
   background-color: white;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
-.header__menu-icon-bars:before {
+.header__menu-icon-bars::before {
   content: "";
   position: absolute;
   top: -0.84rem;
@@ -1295,9 +1299,15 @@ Instead, edit gulp/templates/sprite.css
   width: 2rem;
   height: 0.3333rem;
   background-color: white;
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
 }
 
-.header__menu-icon-bars:after {
+.header__menu-icon-bars::after {
   content: "";
   position: absolute;
   top: 0.84rem;
@@ -1305,6 +1315,26 @@ Instead, edit gulp/templates/sprite.css
   width: 2rem;
   height: 0.3333rem;
   background-color: white;
+  -webkit-transform-origin: 0% 100%;
+          transform-origin: 0% 100%;
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+}
+
+.header__menu-icon-bars--close-x {
+  background-color: transparent;
+}
+
+.header__menu-icon-bars--close-x::before {
+  -webkit-transform: rotate(45deg)scaleX(1.25);
+          transform: rotate(45deg)scaleX(1.25);
+}
+
+.header__menu-icon-bars--close-x::after {
+  -webkit-transform: rotate(-45deg) scaleX(1.25);
+          transform: rotate(-45deg) scaleX(1.25);
 }
 
 @media (min-width: 800px) {

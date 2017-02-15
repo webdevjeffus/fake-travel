@@ -94,6 +94,7 @@ var MobileMenu = function () {
     this.headerMenuIcon = (0, _jquery2.default)("#headerMenuIcon");
     this.headerMenu = (0, _jquery2.default)("#headerMenu");
     this.masthead = (0, _jquery2.default)("#masthead");
+    this.headerMenuIconBars = (0, _jquery2.default)("#headerMenuIconBars");
     this.events();
   }
 
@@ -108,6 +109,8 @@ var MobileMenu = function () {
       console.log("Click");
       this.headerMenu.toggleClass("header__menu-content--displayed");
       this.masthead.toggleClass("header--expanded");
+
+      this.headerMenuIconBars.toggleClass("header__menu-icon-bars--close-x");
     }
   }]);
 

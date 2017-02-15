@@ -797,6 +797,22 @@ Instead, edit gulp/templates/sprite.css
 
 /*********************************************/
 
+.hidden-element {
+
+  opacity: 0;
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+  -webkit-transition: all 1.5s ease-out;
+  transition: all 1.5s ease-out;
+
+}
+
+.hidden-element--revealed {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
 .large-hero {
   position: relative;
   border-bottom: 10px solid #2f5572;

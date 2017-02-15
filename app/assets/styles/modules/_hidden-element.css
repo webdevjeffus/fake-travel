@@ -1,0 +1,10 @@
+.hidden-element {
+
+  opacity: 0;
+  transition: opacity 1.5s ease-out;
+
+  &--revealed {
+    opacity: 1;
+  }
+
+}

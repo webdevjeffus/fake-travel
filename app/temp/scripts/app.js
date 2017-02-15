@@ -10372,10 +10372,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var RevealOnScroll = function () {
-  function RevealOnScroll() {
+  function RevealOnScroll(elements, offset) {
     _classCallCheck(this, RevealOnScroll);
 
-    this.itemsToReveal = (0, _jquery2.default)(".features__feature-block");
+    this.itemsToReveal = elements;
+    this.offsetPercent = offset;
     this.hideInitially();
     this.createWaypoints();
   }
@@ -10388,6 +10389,7 @@ var RevealOnScroll = function () {
   }, {
     key: "createWaypoints",
     value: function createWaypoints() {
+      var that = this;
       this.itemsToReveal.each(function () {
         var currentElement = this;
         new Waypoint({
@@ -10395,7 +10397,7 @@ var RevealOnScroll = function () {
           handler: function handler() {
             (0, _jquery2.default)(currentElement).addClass("hidden-element--revealed");
           },
-          offset: "75%"
+          offset: that.offsetPercent
         });
       });
     }
@@ -11184,10 +11186,15 @@ var _RevealOnScroll = __webpack_require__(2);
 
 var _RevealOnScroll2 = _interopRequireDefault(_RevealOnScroll);
 
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var mobileMenu = new _MobileMenu2.default();
-var revealOnScroll = new _RevealOnScroll2.default();
+new _RevealOnScroll2.default((0, _jquery2.default)(".features__feature-block"), "85%");
+new _RevealOnScroll2.default((0, _jquery2.default)(".people__person-block"), "60%");
 
 /***/ })
 /******/ ]);

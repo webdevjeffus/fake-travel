@@ -11269,6 +11269,7 @@ var StickyHeader = function () {
   function StickyHeader() {
     _classCallCheck(this, StickyHeader);
 
+    this.lazyimages = (0, _jquery2.default)(".lazyload");
     this.masthead = (0, _jquery2.default)("#masthead");
     this.mastheadTrigger = (0, _jquery2.default)(".large-hero__title");
     this.pageSections = (0, _jquery2.default)(".page-section");
@@ -11276,12 +11277,20 @@ var StickyHeader = function () {
     this.createMastheadWaypoint();
     this.createPageSectionWaypoints();
     this.addSmoothScrolling();
+    this.refreshWaypoints();
   }
 
   _createClass(StickyHeader, [{
     key: "addSmoothScrolling",
     value: function addSmoothScrolling() {
       this.mastheadLinks.smoothScroll();
+    }
+  }, {
+    key: "refreshWaypoints",
+    value: function refreshWaypoints() {
+      this.lazyimages.load(function () {
+        Waypoint.refreshAll();
+      });
     }
   }, {
     key: "createMastheadWaypoint",

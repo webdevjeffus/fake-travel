@@ -9,19 +9,15 @@ class Modal {
   }
 
   events() {
-    // click open modal button
     this.openModalBtn.click(this.openModal.bind(this));
 
-    // click close modal btn
     this.closeModalBtn.click(this.closeModal.bind(this));
 
-    // pushes key to close
     $(document).keyup(this.keyPressHandler.bind(this));
-
   }
 
-  keyPressHandler(e) {
-    if ( e.keyCode === 27 ) {
+  keyPressHandler(event) {
+    if ( event.keyCode === 27 ) {
       this.closeModal();
     }
   }
@@ -33,11 +29,7 @@ class Modal {
 
   closeModal() {
     this.modal.removeClass("modal--is-visible");
-    console.log("Click");
   }
-
-
 }
-
 
 export default Modal;

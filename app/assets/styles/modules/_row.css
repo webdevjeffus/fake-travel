@@ -62,7 +62,7 @@
     }
   }
 
-  &--equal-ht-med {
+  .flexbox &--equal-ht-med {
 
     @mixin atMedium {
       display: flex;
@@ -73,18 +73,9 @@
       display: flex;
     }
 
-    @mixin atLarge {
-      display: flex;
-    }
-
-    & > div {
-      float: none;
-      display: flex;
-    }
-
   }
 
-  &--equal-ht-lg {
+  .flexbox &--equal-ht-lg {
 
     @mixin atLarge {
       display: flex;

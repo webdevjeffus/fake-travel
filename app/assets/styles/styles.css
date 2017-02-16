@@ -9,6 +9,8 @@
 @import "modules/_row.css";
 @import "modules/_sprite.css";
 @import "modules/_hidden-element.css";
+@import "modules/_modal.css";
+@import "modules/_social-icons.css";
 
 @import "blocks/_large-hero";
 @import "blocks/_narrative";

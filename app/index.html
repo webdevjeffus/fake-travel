@@ -8,6 +8,8 @@
 
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
   <link rel="stylesheet" href="temp/styles/styles.css">
+  <script type="text/javascript" src="/temp/scripts/Vendor.js"></script>
+
 </head>
 
 <body>
@@ -70,18 +72,18 @@
       <h2 class="narrative__title --mar-b-1x">The first trip we planned <strong>was our own.</strong></h2>
       <h3 class="narrative__subtitle --block-narrow --block-center --mar-b-3x">Ever since, we&rsquo;ve been working to make travel <strong>better for everyone.</strong></h3>
       <div class="wrapper wrapper--med --mar-b-4x">
-        <img sizes="(min-width: 970px) 976px, 100vw" srcset="assets/images/first-trip-low-res-i.jpg 565w, assets/images/first-trip-i.jpg 976w, assets/images/first-trip-hi-dpi-i.jpg 1952w" alt="Couple walking down a street.">
+        <img sizes="(min-width: 970px) 976px, 100vw" class="lazyload" data-srcset="assets/images/first-trip-low-res-i.jpg 565w, assets/images/first-trip-i.jpg 976w, assets/images/first-trip-hi-dpi-i.jpg 1952w" alt="Couple walking down a street.">
       </div>
       <div class="row row--gutters">
         <div class="row__med-4-wide --mar-b-1x-phone">
           <picture>
-            <source srcset="assets/images/our-start-i.jpg 404w,
+            <source data-srcset="assets/images/our-start-i.jpg 404w,
               assets/images/our-start-hi-dpi-i.jpg 808w"
               sizes="404px" media="(min-width:1020px)">
-            <source srcset="assets/images/our-start-portrait-i.jpg 382w,
+            <source data-srcset="assets/images/our-start-portrait-i.jpg 382w,
               assets/images/our-start-portrait-hi-dpi-i.jpg 764w"
               sizes="330px" media="(min-width:800px)">
-            <img srcset="assets/images/our-start-landscape-i.jpg 800w,
+            <img class="lazyload" data-srcset="assets/images/our-start-landscape-i.jpg 800w,
               assets/images/our-start-landscape-hi-dpi-i.jpg 1600w"
               alt="Our founder, Jane Doe">
           </picture>
@@ -140,7 +142,7 @@
     </div>
   </div>
 
-  <div id="testimonials" class="page-section people people--testimonials" data-matching-link="#testimonials-link">
+  <div id="testimonials" class="page-section people people--testimonials lazyload" data-matching-link="#testimonials-link">
     <div class="wrapper wrapper--no-pad-until-sm">
       <h2 class="people__title">
         <span class="people__title-icon icon icon--comment"></span>
@@ -150,7 +152,7 @@
         <div class="row__med-4">
           <div class="people__person-block">
             <div class="people__person-headshot">
-              <img srcset="assets/images/testimonial-jane.jpg 160w, assets/images/testimonial-jane-hi-dpi.jpg 320w" sizes="160px" alt="Jane Doe">
+              <img class="lazyload" data-srcset="assets/images/testimonial-jane.jpg 160w, assets/images/testimonial-jane-hi-dpi.jpg 320w" sizes="160px" alt="Jane Doe">
             </div>
             <h3 class="people__person-name">Jane Doe</h3>
             <h4 class="people__person-note">9 Time Escaper</h4>
@@ -160,7 +162,7 @@
         <div class="row__med-4">
           <div class="people__person-block">
           <div class="people__person-headshot">
-            <img srcset="assets/images/testimonial-john.jpg 160w, assets/images/testimonial-john-hi-dpi.jpg 320w" sizes="160px" alt="John Smith">
+            <img class="lazyload" data-srcset="assets/images/testimonial-john.jpg 160w, assets/images/testimonial-john-hi-dpi.jpg 320w" sizes="160px" alt="John Smith">
           </div>
           <h3 class="people__person-name">John Smith</h3>
           <h4 class="people__person-note">4 Time Escaper</h4>
@@ -170,7 +172,7 @@
         <div class="row__med-4">
           <div class="people__person-block">
             <div class="people__person-headshot">
-              <img srcset="assets/images/testimonial-cat.jpg 160w, assets/images/testimonial-cat-hi-dpi.jpg 320w" sizes="160px" alt="Cat McKitty">
+              <img class="lazyload" data-srcset="assets/images/testimonial-cat.jpg 160w, assets/images/testimonial-cat-hi-dpi.jpg 320w" sizes="160px" alt="Cat McKitty">
             </div>
             <h3 class="people__person-name">Cat McKitty</h3>
             <h4 class="people__person-note">6 Time Escaper</h4>
@@ -219,6 +221,6 @@
     </div>
   </div>
 
-  <script type="text/javascript" src="/temp/scripts/app.js"></script>
+  <script type="text/javascript" src="/temp/scripts/App.js"></script>
 </body>
 </html>

@@ -4,8 +4,8 @@
   &__icon {
     background-color: $colorAccent;
     display: inline-block;
-    margin: 0 0.5rem 0.5rem;
-    width: 45%;
+    margin: 0 0.5rem 1rem;
+    width: 33%;
     height: 60px;
     position: relative;
 

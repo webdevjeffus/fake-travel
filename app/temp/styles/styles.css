@@ -568,7 +568,7 @@ h1,h2,h3,h4,h5,h6 { margin-bottom: 0; }
 }
 
 .wrapper--narrow {
-  width: 100%;
+  max-width: 100%;
   padding-left: 1.25rem;
   padding-right: 1.25rem;
 }
@@ -838,13 +838,32 @@ Instead, edit gulp/templates/sprite.css
   right: 0;
   z-index: 1000;
   background-color: rgba(255,255,255, 0.9);
+  text-align: center;
+
+
+}
+
+.modal__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  width: 20rem;
+}
+
+@media (min-width: 530px) {
+
+  .modal__content {
+    width: 30rem;
+  }
 }
 
 .modal__title {
   font-size: 2.75rem;
   font-weight: 100;
   color: #2f5572;
-  margin: 2rem auto;
+  margin: 0 auto 2rem;
   text-align: center;
 }
 
@@ -875,6 +894,23 @@ Instead, edit gulp/templates/sprite.css
   line-height: 1.35;
 }
 
+.modal__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  -webkit-transform: scaleX(1.25);
+          transform: scaleX(1.25);
+  -webkit-transform-origin: 100% 0;
+          transform-origin: 100% 0;
+  color: #2f5572;
+  cursor: pointer;
+}
+
+.modal__close:hover {
+  color: #d59541;
+}
+
 .social-icons {
   text-align: center;
 }
@@ -882,8 +918,8 @@ Instead, edit gulp/templates/sprite.css
 .social-icons__icon {
   background-color: #d59541;
   display: inline-block;
-  margin: 0 0.5rem 0.5rem;
-  width: 45%;
+  margin: 0 0.5rem 1rem;
+  width: 33%;
   height: 60px;
   position: relative;
 }

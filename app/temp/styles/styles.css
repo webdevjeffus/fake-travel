@@ -839,8 +839,21 @@ Instead, edit gulp/templates/sprite.css
   z-index: 1000;
   background-color: rgba(255,255,255, 0.9);
   text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 
 
+}
+
+.modal--is-visible {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .modal__content {
@@ -894,7 +907,7 @@ Instead, edit gulp/templates/sprite.css
   line-height: 1.35;
 }
 
-.modal__close {
+.modal__close-btn {
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -907,7 +920,7 @@ Instead, edit gulp/templates/sprite.css
   cursor: pointer;
 }
 
-.modal__close:hover {
+.modal__close-btn:hover {
   color: #d59541;
 }
 

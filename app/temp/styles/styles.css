@@ -719,13 +719,13 @@ Instead, edit gulp/templates/sprite.css
 \*********************************************/
 
 .icon {
-      background-image: url("/assets/images/sprites/sprite-8eb89099.svg");
+      background-image: url("../../assets/images/sprites/sprite-8eb89099.svg");
       color: rgba(0,0,0,0);
 
     }
 
 .icon .no-svg .icon {
-  background-image: url("/assets/images/sprites/sprite-8eb89099.png");
+  background-image: url("../../assets/images/sprites/sprite-8eb89099.png");
 }
 
 .icon--clear-view-escapes {
@@ -1172,7 +1172,7 @@ Instead, edit gulp/templates/sprite.css
 @media (min-width: 530px) {
 
   .people--testimonials.lazyloaded {
-    background: url("/assets/images/testimonials-bg.jpg") top center no-repeat;
+    background: url("../../assets/images/testimonials-bg.jpg") top center no-repeat;
     background-size: cover;
   }
 }

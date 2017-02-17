@@ -20,8 +20,6 @@ class MobileMenu {
 
     this.headerMenuIconBars.toggleClass("--close-x")
   }
-
-
 }
 
 export default MobileMenu;

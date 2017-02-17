@@ -19,13 +19,13 @@
   }
 
 
-
   &__btn-container {
 
     @mixin atMedium {
     float: right;
     }
   }
+
 
   &__nav {
 
@@ -78,6 +78,7 @@
     }
   }
 
+
   &__menu-btn {
     background-color: $colorAccent;
 
@@ -107,6 +108,7 @@
     }
   }
 
+
   &__menu-content {
     opacity: 0;
     position: relative;
@@ -130,6 +132,7 @@
       transform: scale(1);
     }
   }
+
 
   &__menu-icon {
     width: 2rem;

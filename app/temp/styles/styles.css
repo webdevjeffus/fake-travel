@@ -1280,13 +1280,12 @@ Instead, edit gulp/templates/sprite.css
 }
 
 .header {
-  position: absolute;
+  position: fixed;
   z-index: 100;
   width: 100%;
   padding: 1.5rem 0;
   -webkit-transition: background-color .5s ease-out;
   transition: background-color .5s ease-out;
-
 }
 
 .header--expanded {
@@ -1296,7 +1295,6 @@ Instead, edit gulp/templates/sprite.css
 @media (min-width: 800px) {
 
   .header {
-    position: fixed;
     background-color: rgba(47,85,114, 0.3);
     padding: 0.625rem 0;
   }
@@ -1354,15 +1352,17 @@ Instead, edit gulp/templates/sprite.css
 }
 
 .header__nav a {
+  display: inline-block;
   color: white;
   font-weight: 300;
-  background-color: #2f5572;
+  background-color: #d59541;
   padding: 0.75rem;
 }
 
 @media (min-width: 800px) {
 
   .header__nav a {
+    display: inline;
     background-color: transparent;
   }
 
@@ -1371,10 +1371,21 @@ Instead, edit gulp/templates/sprite.css
   }
 }
 
+.header__menu-btn {
+  background-color: #d59541;
+}
+
+@media (min-width: 800px) {
+
+  .header__menu-btn {
+    background-color: #2f5572;
+  }
+}
+
 .header__logo {
   position: absolute;
   top: 0;
-  background-color: #2f5572;
+  background-color: #d59541;
   padding: 1.5rem 2rem;
   left: 50%;
   -webkit-transform: translateX(-50%) scale(0.8);
@@ -1393,6 +1404,7 @@ Instead, edit gulp/templates/sprite.css
     left: auto;
     -webkit-transform: translateX(0) scale(1);
             transform: translateX(0) scale(1);
+    background-color: #2f5572;
   }
 
   .header--dark .header__logo {
@@ -1442,63 +1454,65 @@ Instead, edit gulp/templates/sprite.css
   z-index: 110;
 }
 
-.header__menu-icon-bars {
+.header__menu-icon-bars--top {
   position: absolute;
-  top: 0.84rem;
+  top: 0rem;
   left: 0;
   width: 2rem;
-  height: 0.3333rem;
+  height: 0.3rem;
   background-color: white;
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-}
-
-.header__menu-icon-bars::before {
-  content: "";
-  position: absolute;
-  top: -0.84rem;
-  left: 0;
-  width: 2rem;
-  height: 0.3333rem;
-  background-color: white;
   -webkit-transform-origin: 0% 0%;
           transform-origin: 0% 0%;
-  -webkit-transition: -webkit-transform 0.3s ease-out;
-  transition: -webkit-transform 0.3s ease-out;
-  transition: transform 0.3s ease-out;
-  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  box-shadow: 1px 1px 3px #2f5572;
 }
 
-.header__menu-icon-bars::after {
-  content: "";
+.header__menu-icon-bars--top.--close-x {
+  -webkit-transform: rotate(45deg)scaleX(1.25);
+          transform: rotate(45deg)scaleX(1.25);
+  box-shadow: none;
+}
+
+.header__menu-icon-bars--middle {
   position: absolute;
-  top: 0.84rem;
+  top: 0.85rem;
   left: 0;
   width: 2rem;
-  height: 0.3333rem;
+  height: 0.3rem;
+  background-color: white;
+  opacity: 1;
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  box-shadow: 1px 1px 3px #2f5572;
+}
+
+.header__menu-icon-bars--middle.--close-x {
+  opacity: 0;
+}
+
+.header__menu-icon-bars--bottom {
+  position: absolute;
+  top: 1.7rem;
+  left: 0;
+  width: 2rem;
+  height: 0.3rem;
   background-color: white;
   -webkit-transform-origin: 0% 100%;
           transform-origin: 0% 100%;
-  -webkit-transition: -webkit-transform 0.3s ease-out;
-  transition: -webkit-transform 0.3s ease-out;
-  transition: transform 0.3s ease-out;
-  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  box-shadow: 1px 1px 3px #2f5572;
 }
 
-.header__menu-icon-bars--close-x {
-  background-color: transparent;
-}
-
-.header__menu-icon-bars--close-x::before {
-  -webkit-transform: rotate(45deg)scaleX(1.25);
-          transform: rotate(45deg)scaleX(1.25);
-}
-
-.header__menu-icon-bars--close-x::after {
+.header__menu-icon-bars--bottom.--close-x {
   -webkit-transform: rotate(-45deg) scaleX(1.25);
           transform: rotate(-45deg) scaleX(1.25);
+  box-shadow: none;
 }
 
 @media (min-width: 800px) {
